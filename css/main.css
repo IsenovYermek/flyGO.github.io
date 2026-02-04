@@ -1,0 +1,345 @@
+:root {
+    --bg-body: #9e6b27;
+    --bg-header: #428f55;
+    --text-main: #EEEEEE;
+    --accent: #00ADB5;
+    --accent-hover: #008c93;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ================= ШАПКА ================= */
+.site-header {
+    background-color: var(--bg-header);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.logo_img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 25px;
+}
+
+.btn-login, .btn-register {
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid transparent;
+}
+
+.btn-login {
+    border-color: var(--text-main);
+}
+.btn-register {
+    background-color: var(--accent);
+    color: var(--text-main);
+}
+
+/* ================= ГЕРОЙ И ФОРМА ПОИСКА ================= */
+.hero {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.hero_content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+}
+
+.hero_title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* --- ИСПРАВЛЕННЫЙ БЛОК ФОРМЫ --- */
+
+/* 1. Выстраиваем форму в ряд */
+.search-form {
+    display: flex;
+    justify-content: center; /* По центру экрана */
+    align-items: flex-end;   /* Выравниваем по нижнему краю (чтобы кнопка была ровно) */
+    gap: 15px;               /* Отступы между полями */
+    flex-wrap: wrap;         /* Разрешаем перенос на маленьких экранах */
+    background: rgba(0, 0, 0, 0.3); /* Легкий фон под формой для читаемости */
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+/* 2. Исправлена ошибка с точкой (было form-group, стало .form-group) */
+.form-group {
+    display: flex;
+    flex-direction: column; /* Лейбл сверху, поле снизу */
+    align-items: flex-start;
+    width: 220px;           /* Фиксированная ширина для ВСЕХ полей */
+}
+
+.form-label, .visualy-hidden {
+    color: var(--white);
+    margin-bottom: 8px;
+    font-size: 14px;
+    display: block;         /* Делаем видимым и блочным */
+    position: static;       /* Убираем скрытие, если оно было */
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+}
+
+/* Стили для всех полей ввода (используем from-input для всех) */
+.from-input {
+    width: 100%;
+    height: 45px;          /* Фиксированная высота */
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.btn_primary {
+    height: 45px;          /* Высота такая же, как у полей */
+    padding: 0 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--accent);
+    color: var(--text-main);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btn_primary:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Чекбокс "Туда и обратно" */
+.trip-type {
+    margin-bottom: 10px; /* Чуть поднимем над кнопкой, если нужно */
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+/* ================= ОСТАЛЬНОЕ ================= */
+.popular-destinations {
+    padding: 70px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.destinations-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    width: calc(100% - 100px);
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.destination-card {
+    background: var(--bg-header);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.destination-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.destination-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.btn-select {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--accent);
+    color: var(--text-main);
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* ================= ФУТЕР ================= */
+.site-footer {
+    background-color: var(--bg-header);
+    padding: 40px 0 20px;
+    margin-top: 80px;
+    border-top: 2px solid var(--accent);
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-brand, .footer-nav, .footer-socials {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-title {
+    color: var(--accent);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.footer-link {
+    display: block;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    opacity: 0.6;
+    font-size: 13px;
+}
+
+/* ================= МОБИЛЬНАЯ ВЕРСИЯ ================= */
+@media (max-width: 1024px) {
+    .destinations-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-menu {
+        display: none; /* Скрываем меню */
+    }
+    
+    .burger-btn {
+        display: flex; /* Показываем бургер */
+    }
+
+    .search-form {
+        flex-direction: column; /* Поля в столбик */
+        align-items: center;
+        width: 100%;
+        background: transparent; /* Убираем фон на мобилке, если мешает */
+    }
+
+    .form-group {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .btn_primary {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .destinations-list {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        width: 100%;
+    }
+    
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+}

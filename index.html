@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+
+            <a href="/" class="logo">
+                <img src="images/Logo.png" alt="Логотип" class="logo_img">
+                <span class="logo_text">ПУТЬ-КОМПАС.РУ</span>
+            </a>
+
+            <div class="header-menu" id="header-menu">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="search.html" class="nav-link">Поиск рейсов</a></li>
+                        <li><a href="#" class="nav-link">Мои бронирования</a></li>
+                        <li><a href="#" class="nav-link">Помощь</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <a href="#" class="btn-login">Вход</a>
+                    <a href="#" class="btn-register">Регистрация</a>
+                </div>
+            </div>
+
+            <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <video class="hero_bg-video" autoplay muted loop playsinline preload="ato">
+                <source src="videos/volna.mp4" type="video/mp4">
+                <img src="images/Logo.png" alt="Фоновое изображение">
+            </video>
+            <div class="container hero_content">
+                <h1 class="hero_title">Найдите лучшие билеты</h1>
+                <p class="hero_subtitle">
+                    Быстрый поиск, выгодные цены и удобные маршруты по всей стране
+                </p>
+                <form class="search-form" action="/search" method="get">
+                    <div class="form-group form-group--double">
+                        <div class="input-wraper">
+                            <label for="from" class="visualy-hidden">Откуда</label>
+                            <input type="text" id="from" name="from" placeholder="Откуда" required class="from-input">
+                        </div>
+                    </div>
+                    <div class="form-group form-group--double">
+                        <div class="input-wraper">
+                            <label for="to" class="visualy-hidden">Куда</label>
+                            <input type="text" id="to" name="to" placeholder="Куда" required class="from-input">
+                        </div>
+                    </div>
+                    <div class="form-group form-group--double">
+                        <div class="input-wraper">
+                            <label for="departure-date" class="visualy-hidden">Дата выезда</label>
+                            <input type="date" id="departure-date" name="departure-date" required class="from-input">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-wraper">
+                            <label for="passengers" class="visualy-hidden">Колличество пассажиров</label>
+                            <input type="number" id="passengers" name="passengers" min="1" value="1" step="1"
+                                class="from-input">
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="trip-type">
+                            <label class="trip-type_option">
+                                <input type="checkbox" name="trip-type" value="round_trip" class="trip-type_input">
+                                <span class="trip-type_checkbox-visual"></span>
+                                <span class="trip-type_label">Туда и обратно</span>
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn_primary">Найти</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <section class="popular-destinations">
+            <h2 class="section-title">Популярные направления</h2>
+            <div class="destinations-list">
+                <div class="destination-card">
+                    <img src="images/Yalta.jpg" alt="Ялта" class="destination-img">
+                    <div class="destination-info">
+                        <p>Ялта город мечты у моря и гор</p>
+                        <div class="price-label">Цена от <span class="price-value">от 6000р</span></div>
+                        <button type="button" class="btn-select" aria-label="Выбрать направление Ялта">Выбрать</button>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="images/sochi.jpeg" alt="Сочи" class="destination-img">
+                    <div class="destination-info">
+                        <p>В городе Сочи темные ночи</p>
+                        <div class="price-label">Цена от <span class="price-value">от 8000р</span></div>
+                        <button type="button" class="btn-select" aria-label="Выбрать направление Сочи">Выбрать</button>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="images/grecia.jpg" alt="Греция" class="destination-img">
+                    <div class="destination-info">
+                        <p>Греция красивые остова пляжи и чистое море</p>
+                        <div class="price-label">Цена от <span class="price-value">15000р</span></div>
+                        <button type="button" class="btn-select" aria-label="Выбрать направление Греция">Выбрать</button>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="images/turky.jpg" alt="Турция" class="destination-img">
+                    <div class="destination-info">
+                        <p>Красивые места Турции</p>
+                        <div class="price-label">Цена от <span class="price-value">от 17000р</span></div>
+                        <button type="button" class="btn-select" aria-label="Выбрать направление Турция">Выбрать</button>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="images/tailand.jpg" alt="Тайланд" class="destination-img">
+                    <div class="destination-info">
+                        <p>Тайланд тайский бокс море пляж</p>
+                        <div class="price-label">Цена от <span class="price-value">от 45000р</span></div>
+                        <button type="button" class="btn-select" aria-label="Выбрать направление Тайланд">Выбрать</button>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="/" class="Logo">
+                        <img src="images/Logo.png" alt="Логотип" class="logo_img">
+                        <span class="logo_text">ПУТЬ-КОМПАС.РУ</span>
+                        <p class="footer-description">Ваш надёжный помощник в поиске биллетов. Путешествуйте с комфортом по всей России и миру.</p>
+                    </a>
+                </div>
+
+                <nav class="footer-nav">
+                    <h3 class="footer-title">Информация</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">О компании</a></li>
+                        <li><a href="#" class="footer-link">Контакты</a></li>
+                        <li><a href="#" class="footer-link">FAQ (Вопросы и ответы)</a></li>
+                        <li><a href="#" class="footer-link">Условия бронирования</a></li>
+                        <li><a href="#" class="footer-link">Политика конфидициальности</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer-socials">
+                    <h3 class="footer-title">Следите за нами</h3>
+                    <div class="social-list">
+                        <a href="#" class="social-item">Вконтакте</a>
+                        <a href="#" class="social-item">Телеграм</a>
+                        <a href="#" class="social-item">Одноклассники</a>
+                    </div>
+                     <div class="footer-contacts">
+                        <a href="tel: +7800000000" class="footer-phone">88000000000</a>
+                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copy">
+                &copy; 2026 ПУТЬ-КОМПАС.РУ. Все права защищены.
+            </div>
+            
+
+        </div>
+
+    </footer>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

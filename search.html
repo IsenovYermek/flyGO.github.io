@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Поиск рейсов | ПУТЬ-КОМПАС.РУ</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/search.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/Logo.png" alt="Логотип" class="logo_img" />
+                <span class="logo_text">ПУТЬ-КОМПАС.РУ</span>
+            </a>
+
+            <div class="header-menu" id="header-menu">
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="search.html" class="nav-link">Поиск рейсов</a></li>
+                        <li><a href="#" class="nav-link">Мои бронирования</a></li>
+                        <li><a href="#" class="nav-link">Помощь</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <a href="#" class="btn-login">Вход</a>
+                    <a href="#" class="btn-register">Регистрация</a>
+                </div>
+            </div>
+
+            <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <video class="hero_bg-video" autoplay muted loop playsinline preload="ato">
+                <source src="videos/volna.mp4" type="video/mp4" />
+                <img src="images/Logo.png" alt="Фоновое изображение" />
+            </video>
+
+            <div class="hero_content">
+                <h1 class="hero-title">Куда отправимся</h1>
+                <div class="searсh-container">
+                    <form action="#" method="GET" class="search-form">
+                        <div class="form-group">
+                            <label for="from" class="form-label">Откуда</label>
+                            <input type="text" id="from" name="from" placeholder="Город убытия" class="from-input" />
+                        </div>
+                        <div class="form-group">
+                            <label for="to" class="from-label">Куда</label>
+                            <input type="text" id="to" name="to" placeholder="Город прибытия" class="from-input" />
+                        </div>
+                        <div class="form-group">
+                            <label for="departure-date" class="from-label">Дата вылета</label>
+                            <input type="date" id="departure-date" class="date-input" required min="">
+
+                        </div>
+                        <button type="submit" class="btn_primary">Найти рейсы</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="/" class="Logo">
+                        <img src="images/Logo.png" alt="Логотип" class="logo_img" />
+                        <span class="logo_text">ПУТЬ-КОМПАС.РУ</span>
+                        <p class="footer-description">
+                            Ваш надёжный помощник в поиске биллетов. Путешествуйте с
+                            комфортом по всей России и миру.
+                        </p>
+                    </a>
+                </div>
+
+                <nav class="footer-nav">
+                    <h3 class="footer-title">Информация</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">О компании</a></li>
+                        <li><a href="#" class="footer-link">Контакты</a></li>
+                        <li>
+                            <a href="#" class="footer-link">FAQ (Вопросы и ответы)</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Условия бронирования</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer-link">Политика конфидициальности</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="footer-socials">
+                    <h3 class="footer-title">Следите за нами</h3>
+                    <div class="social-list">
+                        <a href="#" class="social-item">Вконтакте</a>
+                        <a href="#" class="social-item">Телеграм</a>
+                        <a href="#" class="social-item">Одноклассники</a>
+                    </div>
+                    <div class="footer-contacts">
+                        <a href="tel: +7800000000" class="footer-phone">88000000000</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copy">
+                &copy; 2026 ПУТЬ-КОМПАС.РУ. Все права защищены.
+            </div>
+        </div>
+    </footer>
+    <script src="js/search-script.js"></script>
+</body>
+
+</html>
